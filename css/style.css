@@ -1,1 +1,117 @@
 /* Denna fil skall innehålla din CSS kod */
+body{
+    margin: 0;
+    background-color: black;
+}
+
+#wrapper {
+    border: 1px solid #000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+    'hd'
+    'main'
+    'ft';
+    }
+header {
+    grid-area: hd;
+    background-color: black;
+    display: flex;
+    margin-bottom: 2vh;
+}
+
+header h1{
+    margin-left: 2vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    font-family: 'Poiret One';
+}
+
+nav{
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-inline: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Poiret One';
+}
+
+main {
+    grid-area: main;
+    background-color: #ddcc00;
+    min-height: 100px;
+}
+
+footer {
+    grid-area: ft;
+    background-color: #edccff;
+}
+
+@media screen and (max-width: 666px) {
+
+    header{
+        position: relative;
+        display: block;
+    }
+
+    #hamburger {
+        /* border: 1px solid #000;  */
+        height:1.5rem;
+        width: 2.5rem; 
+        position:absolute;
+        top:1.3rem;
+        right:0.7rem;
+        
+    }
+
+    #hamburger div {
+        border: 1px solid white;
+        margin: 0.4rem;
+    }
+    
+    nav {
+        justify-content: flex-start;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    nav.active {
+        max-height: 1000px;
+    }
+
+    nav ul {
+        display: block;
+        padding:0;
+        text-align: flex-start;
+    }
+
+    nav ul li {
+        text-align: flex-start;
+        margin-left: 2vh;
+    }
+}
