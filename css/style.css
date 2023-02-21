@@ -15,11 +15,18 @@ body{
     'main'
     'ft';
     }
+
 header {
     grid-area: hd;
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.15);  
+    backdrop-filter: blur(10px);
     display: flex;
     margin-bottom: 2vh;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    border-bottom: 2px solid white;
 }
 
 header h1{
@@ -35,7 +42,6 @@ nav{
     margin: 0;
     display: flex;
     justify-content: flex-end;
-    
 }
 
 nav ul{
@@ -63,9 +69,20 @@ nav ul li a{
 main {
     grid-area: main;
     background-color: #ddcc00;
-    min-height: 100px;
+    min-height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1488763882255-3c188b9ff4d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
 }
 
+main div section{
+    border-radius: 2px stroke white;
+    width: 70vw;
+    height: 20vh;
+    background-color: red;
+}
+
+.background{
+    height: fit-content;
+}
 footer {
     grid-area: ft;
     background-color: #edccff;
@@ -76,6 +93,10 @@ footer {
     header{
         position: relative;
         display: block;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
     }
 
     #hamburger {
@@ -98,6 +119,8 @@ footer {
         max-height: 0;
         overflow: hidden;
         background-color: #000;
+        background-color: rgba(255, 255, 255, 0.15);  
+        backdrop-filter: blur(10px);
     }
 
     nav.active {
