@@ -20,6 +20,7 @@ header {
     grid-area: hd;
     background-color: rgba(255, 255, 255, 0.15);  
     backdrop-filter: blur(10px);
+    /* clip-path:; */
     display: flex;
     margin-bottom: 2vh;
     position: fixed;
@@ -57,6 +58,7 @@ nav ul li {
 
 nav ul li:hover{
     text-decoration: underline;
+    text-decoration-color: white;
 }
 
 nav ul li a{
@@ -71,6 +73,7 @@ main {
     background-image: url(https://images.unsplash.com/photo-1488763882255-3c188b9ff4d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
     display: flex;
     justify-content: center;
+    padding-top: 75px;
 }
 
 .block{
@@ -98,13 +101,27 @@ background: linear-gradient(135deg, rgba(112,143,150,1) 0%, rgba(170,137,95,1) 1
     background: rgb(170,137,95);
     background: linear-gradient(225deg, rgba(170,137,95,1) 0%, rgba(224,216,204,1) 100%);
 }
-.blockorder {
+/* .blockorder {
     margin-top: 75px ;
-}
+} */
 
 .background{
     height: fit-content;
 }
+
+#nameblock{
+    border-radius: 2px stroke white;
+    width: 80vw;
+    height: 50vh;
+    min-height: 30vh;
+    background-color: red;
+    margin-left: none;
+    margin:75px;
+    display: flex;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
 footer {
     grid-area: ft;
     background-color: #edccff;
@@ -140,9 +157,8 @@ footer {
         justify-content: flex-start;
         max-height: 0;
         overflow: hidden;
-        background-color: #000;
-        background-color: rgba(255, 255, 255, 0.15);  
-        backdrop-filter: blur(10px);
+        /* background-color: rgba(255, 255, 255, 0.15);  
+        backdrop-filter: blur(10px); */
     }
 
     nav.active {
