@@ -1,9 +1,12 @@
-/* Denna fil skall innehålla din CSS kod */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 body{
     margin: 0;
     /* background-image: url(https://images.unsplash.com/photo-1596120717633-dabb19da51f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80);
     background-size: cover; */
-    background-color: lightgray;
+    background-color: black;
+    width: 100vw;
+    min-width: 100px;
 }
 
 #wrapper {
@@ -38,7 +41,7 @@ header h1{
     justify-content: flex-start;
     align-items: center;
     color: white;
-    font-family: 'Poiret One';
+    font-family: 'Source Code Pro';
 }
 
 nav{
@@ -67,12 +70,13 @@ nav ul li a{
     color: white;
     text-decoration: none;
     font-size: 1.4rem;
-    font-family: 'Poiret One';
+    font-family: 'Source Code Pro';
 }
 
 main {
     grid-area: main;
     background-image: url(https://images.unsplash.com/photo-1488763882255-3c188b9ff4d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+    background-size: cover;
     display: flex;
     justify-content: center;
     padding-top: 75px;
@@ -113,9 +117,9 @@ background: linear-gradient(135deg, rgba(112,143,150,1) 0%, rgba(170,137,95,1) 1
 
 #lpmain {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     background-image: url(https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80);
-    background-size: 100vw;
+    background-size: cover;
 }
 
 #nameblock{
@@ -123,23 +127,26 @@ background: linear-gradient(135deg, rgba(112,143,150,1) 0%, rgba(170,137,95,1) 1
     width: 80vw;
     height: 70vh;
     min-height: 30vh;
-    margin-left: none;
-    margin-top: 75px;
-    margin-bottom: 75px;
-    margin-right: 75px;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
+    margin: 75px;
+    display: flex;
+    border-radius: 15px;
     background: rgb(255,202,201);
     background: linear-gradient(315deg, rgba(255,202,201,1) 0%, rgba(115,125,254,1) 100%);
 }
 
 footer {
     grid-area: ft;
-    background-color: #edccff;
-    height: 75px;
+    background-color: black;
+    height: 100%;
+    display: flex;
 }
 
-@media screen and (max-width: 696px) {
+footer img{
+    height: 100px;
+    padding: 2%;
+}
+
+@media screen and (max-width: 711px) {
 
     header{
         position: relative;
@@ -186,5 +193,15 @@ footer {
     nav ul li {
         text-align: flex-start;
         margin-left: 2vh;
+    }
+
+    #nameblock {
+        margin-inline: 10px;
+        width: 90vw;
+    }
+
+    .block{
+        margin-inline: 10px;
+        width: 90vw;
     }
 }
