@@ -6,7 +6,6 @@ body{
     background-size: cover; */
     background-color: black;
     width: 100vw;
-    min-width: 100px;
 }
 
 #wrapper {
@@ -35,13 +34,21 @@ header {
     border-bottom: 2px solid white;
 }
 
-header h1{
+/* header h1{
+    font-family: 'Source Code Pro';
     margin-left: 2vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     color: white;
-    font-family: 'Source Code Pro';
+} */
+
+header img{
+    margin: 2vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
 }
 
 nav{
@@ -89,8 +96,32 @@ main {
     min-height: 30vh;
     background-color: red;
     margin:75px;
+    padding: 2vh;
     display: flex;
     border-radius: 15px;
+}
+
+.block .TI {
+    display: flex;
+    flex-direction: column;
+}
+
+.block img {
+    height: 40vh;
+    
+}
+
+.pt {
+   font-family: 'Source Code Pro';
+   font-size: larger;
+}
+
+.ct {
+    display: flex;
+    float: left;
+    padding-inline:2vh;
+    padding-top: 6vh;
+    font-family: 'Source Code Pro'; 
 }
 
 #b1 {
@@ -120,18 +151,37 @@ background: linear-gradient(135deg, rgba(112,143,150,1) 0%, rgba(170,137,95,1) 1
     justify-content: center;
     background-image: url(https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80);
     background-size: cover;
+    padding: auto;
 }
 
+#nameblock img{
+    height: 10vh;
+    margin: 2vh;
+    display: flex;
+    align-self: flex-end;
+}
 #nameblock{
     border-radius: 2px stroke white;
     width: 80vw;
     height: 70vh;
     min-height: 30vh;
     margin: 75px;
+    padding: 2vh;
     display: flex;
+    flex-direction: column;
     border-radius: 15px;
-    background: rgb(255,202,201);
+    /*background: rgb(255,202,201);*/
     background: linear-gradient(315deg, rgba(255,202,201,1) 0%, rgba(115,125,254,1) 100%);
+}
+
+.ltt {
+    font-family: 'Source Code Pro';
+    font-size: xx-large;
+}
+
+.lpt{
+    font-family: 'Source Code Pro';
+    font-size: x-large;
 }
 
 footer {
@@ -139,6 +189,7 @@ footer {
     background-color: black;
     height: 100%;
     display: flex;
+    max-width: 100%;
 }
 
 footer img{
@@ -146,7 +197,7 @@ footer img{
     padding: 2%;
 }
 
-@media screen and (max-width: 711px) {
+@media screen and (max-width: 790px) {
 
     header{
         position: relative;
@@ -203,5 +254,23 @@ footer img{
     .block{
         margin-inline: 10px;
         width: 90vw;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .block .TI img{
+        width: fit-content;
+        max-width: 90vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .ct {
+        display: flex;
+        float: left;
+        padding-inline:2vh;
+        padding-top: 1vh;
+        font-family: 'Source Code Pro'; 
     }
 }
